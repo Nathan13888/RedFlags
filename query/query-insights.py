@@ -12,6 +12,11 @@ import warnings
 warnings.filterwarnings('ignore')
 pd.set_option('display.max_colwidth', None)
 import os
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-q", "--query", help="Query for processing.")
+args = parser.parse_args()
 
 api_key = None
 with open('../secrets/cohere') as f:
@@ -33,7 +38,7 @@ embeds = np.array(embeds)
 embeds.shape
 
 # 3.2. Find the neighbors of a user query
-query = "What is the tallest mountain in the world?"
+query = args.query
 
 query_embed = co.embed(texts=[query],
                   model="large",
