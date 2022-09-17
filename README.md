@@ -4,6 +4,9 @@ At RedFlags, our priority is to protect you, your family, and your community fro
 
 > ***Please learn more at our Devpost!!! https://devpost.com/software/red-flag-dfhrbq***
 
+## Our Tech Stack
+![](./stack.png)
+
 
 
 
